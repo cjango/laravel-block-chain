@@ -1,0 +1,33 @@
+{
+    "name": "jasonc/block-chain",
+    "description": "私有区块链",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "C.Jason",
+            "email": "chenjxlg@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "adbario/php-dot-notation": "^2.2",
+        "ext-openssl": "*",
+        "stephenhill/base58": "~1.0",
+        "pimple/pimple": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jason\\BlockChain\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jason\\BlockChain\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "BlockChain": "Jason\\BlockChain\\Laravel\\Facade"
+            }
+        }
+    }
+}
